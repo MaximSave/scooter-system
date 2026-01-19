@@ -1,0 +1,6 @@
+psycopg2-binary
+prometheus-client
+networkx
+numpy
+shapely
+kafka-python
