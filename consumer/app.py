@@ -96,7 +96,7 @@ def main():
 
         try:
             with conn.cursor() as cur:
-                # 1️⃣ Обновляем текущее состояние
+                # 1 Обновляем текущее состояние
                 cur.execute(
                     """
                     INSERT INTO scooter_state (scooter_id, lat, lon, battery, ts)
@@ -111,7 +111,7 @@ def main():
                     (event["scooter_id"], data["lat"], data["lon"], data.get("battery"), ts)
                 )
 
-                # 2️⃣ Сохраняем историю маршрута
+                # 2 Сохраняем историю маршрута
                 cur.execute(
                     """
                     INSERT INTO scooter_route (scooter_id, lat, lon, battery, ts)
